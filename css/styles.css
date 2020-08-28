@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+  font-family: sans-serif;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+  background: rgb(241, 241, 241);
+  box-shadow: 5px 5px 16px 0 rgba(0, 0, 0, 0.2),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+}
+
+form h1 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: rgb(50, 122, 205);
+  margin-bottom: 2rem;
+  text-align: center;
+  background: -webkit-linear-gradient(rgb(62, 152, 255), rgb(16, 61, 112));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.result-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+  color: rgb(112, 112, 112);
+}
+
+.result {
+  height: 3rem;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.028),
+    rgba(255, 255, 255, 0.017)
+  );
+  border: 1px solid rgba(158, 158, 158, 0.5);
+}
+
+.copy {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(158, 158, 158);
+  height: 100%;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.length-input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 1.25rem;
+  border: none;
+  box-shadow: inset 1px 1px 6px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 15px 0 rgba(255, 255, 255, 0.2);
+  background: none;
+  color: rgb(50, 122, 205);
+  margin-bottom: 1rem;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.upper-case,
+.lower-case,
+.numbers,
+.symbols {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(50, 122, 205);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, 0.25),
+    -4px -4px 8px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    -0deg,
+    rgba(0, 0, 0, 0.14),
+    rgba(255, 255, 255, 0.2)
+  );
+  user-select: none;
+}
+
+.active {
+  box-shadow: inset 2px 2px 8px 0 rgba(0, 0, 0, 0.25),
+    inset -2px -2px 7px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  color: rgb(18, 68, 126);
+}
+
+.symbols {
+  margin-bottom: 2rem;
+}
+
+form button {
+  width: 100%;
+  height: 3rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: rgb(50, 122, 205);
+  background: linear-gradient(
+    to bottom right,
+    rgb(50, 122, 205),
+    rgb(18, 68, 126)
+  );
+  color: whitesmoke;
+  border: none;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3),
+    -5px -5px 4px 0 rgb(255, 255, 255, 0.4);
+  outline: none;
+}
+
+form button:active {
+  background: linear-gradient(to top left, rgb(50, 122, 205), rgb(18, 68, 126));
+  box-shadow: inset 4px 4px 15px 0 rgba(0, 0, 0, 0.35),
+    inset -4px -4px 15px 0 rgba(255, 255, 255, 0.2);
+  color: rgb(224, 224, 224);
+}
+
+.alert {
+  color: whitesmoke;
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 400px) {
+  .alert {
+    font-size: 0.8rem;
+  }
+}
